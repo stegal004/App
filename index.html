@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f7" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Studio" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <title>Studio — La tua giornata</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navigazione principale">
+        <a class="brand" href="#oggi" aria-label="Studio, pagina iniziale">
+          <span class="brand-mark" aria-hidden="true">S</span><span>Studio</span>
+        </a>
+        <nav class="navigation">
+          <a class="nav-item active" href="#oggi"><span>⌂</span> Oggi</a>
+          <a class="nav-item" href="#materie"><span>▤</span> Materie</a>
+          <a class="nav-item" href="#calendario"><span>□</span> Calendario</a>
+          <a class="nav-item" href="#esami"><span>◒</span> Esami</a>
+          <a class="nav-item" href="#statistiche"><span>⌁</span> Statistiche</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <button class="profile" type="button" aria-label="Apri profilo di Stefano">
+            <span class="avatar">SG</span><span><strong>Stefano</strong><small>3° anno</small></span><span class="chevron">⌄</span>
+          </button>
+        </div>
+      </aside>
+
+      <main id="oggi">
+        <header class="topbar">
+          <button class="mobile-menu" type="button" aria-label="Apri menu">☰</button>
+          <p class="date">Lunedì, 3 novembre</p>
+          <div class="top-actions">
+            <div class="theme-control">
+              <button class="appearance-button" id="appearance-toggle" type="button" aria-expanded="false" aria-controls="appearance-menu">
+                <span class="appearance-icon" aria-hidden="true">◐</span><span class="appearance-label">Aspetto</span>
+              </button>
+              <div class="appearance-menu" id="appearance-menu" hidden>
+                <p>Aspetto</p>
+                <button type="button" class="theme-option selected" data-theme="light"><span class="theme-preview light-preview"></span><span>Chiaro</span><b>✓</b></button>
+                <button type="button" class="theme-option" data-theme="dark"><span class="theme-preview dark-preview"></span><span>Scuro</span><b>✓</b></button>
+                <button type="button" class="theme-option" data-theme="glass"><span class="theme-preview glass-preview"></span><span>Liquid Glass</span><b>✓</b></button>
+              </div>
+            </div>
+            <button class="icon-button" type="button" aria-label="Notifiche">♢<i></i></button>
+            <button class="avatar mobile-avatar" type="button" aria-label="Profilo di Stefano">SG</button>
+          </div>
+        </header>
+
+        <section class="hero" aria-labelledby="welcome-title">
+          <div>
+            <p class="eyebrow">IL TUO SEMESTRE</p>
+            <h1 id="welcome-title">Buongiorno, Stefano.</h1>
+            <p class="intro">Hai già costruito una bella costanza. Facciamo un piccolo passo anche oggi.</p>
+          </div>
+          <button class="primary-button" id="start-study" type="button"><span>+</span> Inizia a studiare</button>
+        </section>
+
+        <section class="overview" aria-label="Riepilogo della settimana">
+          <article class="summary-card progress-summary">
+            <div class="summary-heading"><span>Obiettivo settimanale</span><strong>8h 40m <small>di 12h</small></strong></div>
+            <div class="progress-track" role="progressbar" aria-label="Obiettivo settimanale" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+            <p>Ti restano <strong>3h 20m</strong> per raggiungerlo.</p>
+          </article>
+          <article class="summary-card compact-stat">
+            <span class="stat-icon blue">↗</span><div><span class="stat-label">Sessioni questa settimana</span><strong>11</strong><small>+3 rispetto alla scorsa</small></div>
+          </article>
+          <article class="summary-card compact-stat">
+            <span class="stat-icon orange">✦</span><div><span class="stat-label">Costanza complessiva</span><strong>86%</strong><small>Ottimo ritmo</small></div>
+          </article>
+        </section>
+
+        <div class="content-grid">
+          <section class="today-card" aria-labelledby="today-title">
+            <div class="section-head"><div><p class="eyebrow">PIANO DI OGGI</p><h2 id="today-title">Cosa c'è in programma</h2></div><button class="text-button" type="button">Modifica</button></div>
+            <div class="study-list">
+              <article class="study-item accent-violet"><div class="subject-symbol">λ</div><div class="study-copy"><p>Analisi matematica II</p><span>Integrali multipli · Capitolo 4</span></div><div class="duration">1h 30m</div><button class="play" type="button" aria-label="Avvia Analisi matematica II">▶</button></article>
+              <article class="study-item accent-blue"><div class="subject-symbol">⌁</div><div class="study-copy"><p>Fisica II</p><span>Campo magnetico · Esercizi 12–20</span></div><div class="duration">1h</div><button class="play" type="button" aria-label="Avvia Fisica II">▶</button></article>
+              <article class="study-item accent-green"><div class="subject-symbol">⌘</div><div class="study-copy"><p>Programmazione</p><span>Strutture dati · Ripasso</span></div><div class="duration">45m</div><button class="play" type="button" aria-label="Avvia Programmazione">▶</button></article>
+            </div>
+            <button class="add-plan" type="button">+ Aggiungi al piano</button>
+          </section>
+
+          <section class="insight-card" aria-labelledby="insight-title">
+            <div class="sparkle">✦</div><p class="eyebrow">IL TUO ASSISTENTE</p><h2 id="insight-title">Un consiglio per oggi</h2><p>Fisica II è ferma da 4 giorni. Una sessione breve oggi ti aiuterebbe a mantenere il ritmo prima dell’appello.</p><button class="light-button" type="button">Pianifica 45 minuti <span>→</span></button>
+          </section>
+        </div>
+
+        <section class="subjects" id="materie" aria-labelledby="subjects-title">
+          <div class="section-head"><div><p class="eyebrow">LE TUE MATERIE</p><h2 id="subjects-title">La tua costanza</h2></div><button class="text-button" type="button">Vedi tutte <span>→</span></button></div>
+          <div class="subject-cards">
+            <article class="subject-card"><div class="subject-card-top"><span class="subject-icon violet">λ</span><span class="streak hot"><b>♨</b> 12 giorni</span></div><h3>Analisi matematica II</h3><p>Prossimo esame · 24 gen</p><div class="mini-progress"><span style="width: 68%"></span></div><footer><span>68% del programma</span><strong>12h 20m</strong></footer></article>
+            <article class="subject-card"><div class="subject-card-top"><span class="subject-icon blue">⌁</span><span class="streak warm"><b>♨</b> 5 giorni</span></div><h3>Fisica II</h3><p>Prossimo esame · 31 gen</p><div class="mini-progress"><span style="width: 41%"></span></div><footer><span>41% del programma</span><strong>8h 45m</strong></footer></article>
+            <article class="subject-card"><div class="subject-card-top"><span class="subject-icon green">⌘</span><span class="streak fresh"><b>●</b> 2 giorni</span></div><h3>Programmazione</h3><p>Prossimo esame · 7 feb</p><div class="mini-progress"><span style="width: 30%"></span></div><footer><span>30% del programma</span><strong>5h 10m</strong></footer></article>
+          </div>
+        </section>
+
+        <section class="grades" id="esami" aria-labelledby="grades-title">
+          <div><p class="eyebrow">CARRIERA</p><h2 id="grades-title">Media e crediti</h2></div><div class="grade-data"><span>Media ponderata <strong>27,8</strong></span><span>CFU acquisiti <strong>96 / 180</strong></span></div>
+        </section>
+      </main>
+    </div>
+    <div id="study-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-panel"><button class="close-modal" type="button" aria-label="Chiudi">×</button><p class="eyebrow">NUOVA SESSIONE</p><h2 id="modal-title">Su cosa vuoi concentrarti?</h2><div class="modal-options"><button type="button">Analisi matematica II <span>›</span></button><button type="button">Fisica II <span>›</span></button><button type="button">Programmazione <span>›</span></button></div></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

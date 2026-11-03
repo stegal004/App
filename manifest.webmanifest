@@ -1,0 +1,13 @@
+{
+  "name": "Studio — il tuo semestre",
+  "short_name": "Studio",
+  "lang": "it",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#f5f5f7",
+  "description": "Organizza lo studio, mantieni le streak e segui la tua media.",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
